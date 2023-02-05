@@ -9,9 +9,17 @@ public class Main {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConfigApp.class);
 
-        Clienti cliente = context.getBean(Clienti.class);
-        System.out.println(cliente.getNome());
+        Clienti cliente1 = context.getBean(Clienti.class);
+        cliente1.setNome("Nicola");
+        System.out.println(cliente1.getNome());
+        /*
+        Clienti cliente1 = context.getBean("Cliente1", Clienti.class);
+        System.out.println(cliente1.getNome());
+
+        Clienti cliente2 = context.getBean("Cliente2", Clienti.class);
+        System.out.println(cliente2.getNome());
 
         context.close();
+        */
     }
 }
